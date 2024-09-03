@@ -4,9 +4,9 @@ on:
         branches: [ main ]
 jobs:
     playwrighttests:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-20.04
         container:
-            image: mcr.microsoft.com/playwright:v1.46.1-noble
+            image: mcr.microsoft.com/playwright:v1.46.1-focal
             env:
                 ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
         steps:
